@@ -4,6 +4,7 @@ The function fit_model contains the encoder-decoder pipeline with input embeddin
 which is used for computing the training and the validation error along with validation accuracy.
 After defining the model, the training of the model can be done using the fit_model function.
 The sweep configuration that we used for hyperparameter tuning are:
+
 sweep_config = {
     'method': 'bayes', 
     'metric': {
@@ -44,10 +45,13 @@ sweep_config = {
         }
     }
 }
+
 Followed by implementation of the RNN without attention mechanism and with attention mechanism.
 The function attention_plot plots the attention heatmaps for multiple inputs.
-Dataset: Dakshina Dataset, using "!wget https://storage.googleapis.com/gresearch/dakshina/dakshina_dataset_v1.0.tar
-!tar -xf dakshina_dataset_v1.0.tar" command, directly Dakshina dataset can be downloaded.
+Dataset: Dakshina Dataset, using
+"!wget https://storage.googleapis.com/gresearch/dakshina/dakshina_dataset_v1.0.tar
+!tar -xf dakshina_dataset_v1.0.tar"
+command, directly Dakshina dataset can be downloaded.
 
 The transliteration task is carried for Hindi lexicons from Google's Dakshina dataset.
 The Hindi lexicons contains 44204 training words, 4358 validation words and 4502 testing words.
